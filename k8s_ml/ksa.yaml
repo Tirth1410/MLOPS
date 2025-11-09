@@ -4,7 +4,7 @@ metadata:
   name: ml-service-account
   namespace: ml
   annotations:
-    iam.gke.io/gcp-service-account: ml-serviceaccount@mlops-476802.iam.gserviceaccount.com
+    iam.gke.io/gcp-service-account: mlops-500@gen-lang-client-0202545123.iam.gserviceaccount.com
 
 
 

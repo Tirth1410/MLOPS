@@ -12,7 +12,7 @@ steps:
     args:
       - build
       - '-t'
-      - 'gcr.io/mlops-476802/linear_regression:$SHORT_SHA'
+      - 'gcr.io/gen-lang-client-0202545123/linear_regression:$SHORT_SHA'
       - .
   - name: gcr.io/cloud-builders/docker
     id: Build Data Cronjob Image
@@ -20,7 +20,7 @@ steps:
     args:
       - build
       - '-t'
-      - 'gcr.io/mlops-476802/ml-cronjob:$SHORT_SHA'
+      - 'gcr.io/gen-lang-client-0202545123/ml-cronjob:$SHORT_SHA'
       - .
   - name: gcr.io/cloud-builders/docker
     id: Build MLflow Image
@@ -28,23 +28,23 @@ steps:
     args:
       - build
       - '-t'
-      - 'gcr.io/mlops-476802/mlflow-server:$SHORT_SHA'
+      - 'gcr.io/gen-lang-client-0202545123/mlflow-server:$SHORT_SHA'
       - .
   - name: gcr.io/cloud-builders/docker
     id: Push Linear Regression Image
     args:
       - push
-      - 'gcr.io/mlops-476802/linear_regression:$SHORT_SHA'
+      - 'gcr.io/gen-lang-client-0202545123/linear_regression:$SHORT_SHA'
   - name: gcr.io/cloud-builders/docker
     id: Push Data Cronjob Image
     args:
       - push
-      - 'gcr.io/mlops-476802/ml-cronjob:$SHORT_SHA'
+      - 'gcr.io/gen-lang-client-0202545123/ml-cronjob:$SHORT_SHA'
   - name: gcr.io/cloud-builders/docker
     id: Push MLflow Image
     args:
       - push
-      - 'gcr.io/mlops-476802/mlflow-server:$SHORT_SHA'
+      - 'gcr.io/gen-lang-client-0202545123/mlflow-server:$SHORT_SHA'
   - name: gcr.io/cloud-builders/kubectl
     id: Apply ConfigMap
     env:
@@ -161,9 +161,9 @@ steps:
       - '-f'
       - k8s_ml/mlflow-ingress.yaml
 images:
-  - 'gcr.io/mlops-476802/linear_regression:$SHORT_SHA'
-  - 'gcr.io/mlops-476802/ml-cronjob:$SHORT_SHA'
-  - 'gcr.io/mlops-476802/mlflow-server:$SHORT_SHA'
+  - 'gcr.io/gen-lang-client-0202545123/linear_regression:$SHORT_SHA'
+  - 'gcr.io/gen-lang-client-0202545123/ml-cronjob:$SHORT_SHA'
+  - 'gcr.io/gen-lang-client-0202545123/mlflow-server:$SHORT_SHA'
 options:
   logging: CLOUD_LOGGING_ONLY
 substitutions:

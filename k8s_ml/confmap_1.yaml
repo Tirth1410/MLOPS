@@ -4,10 +4,10 @@ metadata:
   name: confmap-1
   namespace: ml
 data:
-  MONGO_DB: "mlops_project_database"
-  COLLECTION_2: "corrections"
-  BUCKET_1: "mlops-476802-bucket-1"
-  BUCKET_2: "mlops-476802-bucket-2"
-  BUCKET_3: "gs://mlops-476802-bucket-3" #Since this is getting used in the mlflow server for artifact root
+  MONGO_DB: "MLOPS"
+  COLLECTION_2: "correction"
+  BUCKET_1: "gen-lang-client-0202545123-bucket-1"
+  BUCKET_2: "gen-lang-client-0202545123-bucket-2"
+  BUCKET_3: "gs://gen-lang-client-0202545123-bucket-3" #Since this is getting used in the mlflow server for artifact root
   BATCH_SIZE: "50"
   TRAIN_TEST_SPLIT: "0.7"

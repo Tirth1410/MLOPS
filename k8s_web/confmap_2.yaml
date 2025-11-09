@@ -4,6 +4,6 @@ metadata:
   name: confmap-2
   namespace: web
 data:
-  MONGO_DB: "mlops_project_database"
-  COLLECTION_1: "predictions"
-  COLLECTION_2: "corrections"
+  MONGO_DB: "MLOPS"
+  COLLECTION_1: "prediction_1"
+  COLLECTION_2: "correction"

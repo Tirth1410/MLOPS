@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: gcr.io/mlops-476802/webapp:$SHORT_SHA
+          image: gcr.io/gen-lang-client-0202545123/webapp:$SHORT_SHA
           imagePullPolicy: Always
           ports:
             - containerPort: 5000

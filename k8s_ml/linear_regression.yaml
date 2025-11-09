@@ -20,7 +20,7 @@ spec:
           serviceAccountName: ml-service-account
           containers:
             - name: linear-regression
-              image: gcr.io/mlops-476802/linear_regression:__THIS__IS__MY__VARIABLE__
+              image: gcr.io/gen-lang-client-0202545123/linear_regression:__THIS__IS__MY__VARIABLE__
               imagePullPolicy: Always
               env:
                 - name: BUCKET_2

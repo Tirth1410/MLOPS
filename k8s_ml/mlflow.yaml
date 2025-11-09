@@ -21,7 +21,7 @@ spec:
       
       containers:
         - name: mlflow
-          image: gcr.io/mlops-476802/mlflow-server:$SHORT_SHA
+          image: gcr.io/gen-lang-client-0202545123/mlflow-server:$SHORT_SHA
           imagePullPolicy: Always
           ports:
             - containerPort: 5000

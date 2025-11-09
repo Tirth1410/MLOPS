@@ -12,7 +12,7 @@ steps:
   args:
     [
       'build',
-      '-t', 'gcr.io/mlops-476802/dbapp:$SHORT_SHA',
+      '-t', 'gcr.io/gen-lang-client-0202545123/dbapp:$SHORT_SHA',
       '.'
     ]
   dir: 'dbapp'
@@ -22,7 +22,7 @@ steps:
   args:
     [
       'build',
-      '-t', 'gcr.io/mlops-476802/mlapp:$SHORT_SHA',
+      '-t', 'gcr.io/gen-lang-client-0202545123/mlapp:$SHORT_SHA',
       '.'
     ]
   dir: 'mlapp'
@@ -32,7 +32,7 @@ steps:
   args:
     [
       'build',
-      '-t', 'gcr.io/mlops-476802/webapp:$SHORT_SHA',
+      '-t', 'gcr.io/gen-lang-client-0202545123/webapp:$SHORT_SHA',
       '.'
     ]
   dir: 'webapp'
@@ -43,15 +43,15 @@ steps:
 # -------------------------------------------------------------
 - name: 'gcr.io/cloud-builders/docker'
   id: Push DB App Image
-  args: ['push', 'gcr.io/mlops-476802/dbapp:$SHORT_SHA']
+  args: ['push', 'gcr.io/gen-lang-client-0202545123/dbapp:$SHORT_SHA']
 
 - name: 'gcr.io/cloud-builders/docker'
   id: Push ML App Image
-  args: ['push', 'gcr.io/mlops-476802/mlapp:$SHORT_SHA']
+  args: ['push', 'gcr.io/gen-lang-client-0202545123/mlapp:$SHORT_SHA']
 
 - name: 'gcr.io/cloud-builders/docker'
   id: Push Web App Image
-  args: ['push', 'gcr.io/mlops-476802/webapp:$SHORT_SHA']
+  args: ['push', 'gcr.io/gen-lang-client-0202545123/webapp:$SHORT_SHA']
 
 
 # -------------------------------------------------------------
@@ -207,9 +207,9 @@ substitutions:
 # 💾 Image tracking (build outputs)
 # -------------------------------------------------------------
 images:
-  - 'gcr.io/mlops-476802/dbapp:$SHORT_SHA'
-  - 'gcr.io/mlops-476802/mlapp:$SHORT_SHA'
-  - 'gcr.io/mlops-476802/webapp:$SHORT_SHA'
+  - 'gcr.io/gen-lang-client-0202545123/dbapp:$SHORT_SHA'
+  - 'gcr.io/gen-lang-client-0202545123/mlapp:$SHORT_SHA'
+  - 'gcr.io/gen-lang-client-0202545123/webapp:$SHORT_SHA'
 
 options:
  logging: CLOUD_LOGGING_ONLY
