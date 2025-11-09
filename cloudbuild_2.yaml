@@ -203,7 +203,7 @@ substitutions:
   _CLUSTER: mlops-cluster    # change this to your actual cluster name
 
 
-# ------------------------------------------------------------
+# -------------------------------------------------------------
 # 💾 Image tracking (build outputs)
 # -------------------------------------------------------------
 images:
